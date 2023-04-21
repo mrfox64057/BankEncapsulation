@@ -4,7 +4,13 @@
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            BankAccount adamsAccount = new BankAccount();
+            Console.WriteLine("Greetings, how much would you like to deposit today?");
+            var amountDeposited = Convert.ToDouble(Console.ReadLine());
+
+            Console.WriteLine(adamsAccount.GetBalance());
+            adamsAccount.Deoposit(amountDeposited);
+            Console.WriteLine(adamsAccount.GetBalance());
         }
     }
 }
